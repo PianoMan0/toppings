@@ -86,31 +86,6 @@ body {
   100% { transform: translateY(-35px) scale(1.12);}
 }
 
-.gradient-card .gradient-heart {
-  position: relative;
-  width: 54px;
-  height: 48px;
-  margin-top: 1.3rem;
-}
-.gradient-card .gradient-heart:before,
-.gradient-card .gradient-heart:after {
-  content: "";
-  position: absolute;
-  left: 27px;
-  top: 0;
-  width: 27px;
-  height: 44px;
-  background: radial-gradient(circle at 60% 40%, #ff91af, #f8e71c 80%, #ff6b6b 100%);
-  border-radius: 27px 27px 0 0;
-  transform: rotate(-45deg);
-}
-.gradient-card .gradient-heart:after {
-  left: 0;
-  transform: rotate(45deg);
-}
-.gradient-card .gradient-heart {
-  animation: beat 0.9s infinite alternate;
-}
 @keyframes beat {
   0% { transform: scale(1);}
   100% { transform: scale(1.13);}
