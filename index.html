@@ -1,42 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>I Love CSS Animations!</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<title>Beach Ball Bang</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f0f8ff, #add8e6);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #ffa500;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    flex: 1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+h2 {
+    color: #ffa500;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #ffa500;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.ball-image {
+    width: 100px;
+    height: 100px;
+    animation: bounce 2s infinite ease-in-out; /* Animated ball */
+    margin: 20px auto;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-25px); }
+    100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .section {
+        margin: 10px 0;
+    }
+    .ball-image { /* Adjust image size on smaller screens */
+        width: 50px;
+        height: 50px;
+    }
+}
+</style>
 </head>
 <body>
-  <main class="container">
-    <section class="intro">
-      <h1>
-        <span class="rainbow-text">I 💜 CSS Animations!</span>
-      </h1>
-      <p>
-        CSS animations bring magic to the web.<br>
-        They transform boring stuff into <span class="sparkle">amazing stuff</span>!
-        I've been using them for a long time and they always enhance my websites!
-      </p>
-    </section>
-    <center><section class="showcase">
-      <div class="css-grid">
-        <div class="card pulse-card">
-          <h2>This is a bouncy ball. Boom.</h2>
-          <div class="bouncer"></div>
+    <div class="header">
+        <h1>Welcome to the Official BBB Website!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>About the Sport</h2>
+            <p>Beach Ball Bang is a sport that combines the fun of beach volleyball with the thrill of dodgeball. It is played on steps, which is revolutionary in sports. The game is fast-paced, exciting and suitable for all ages and skill levels. Beach Ball Bang was invented about 6 years ago by Ben and Joel Gallagher and has grown in to a unique and fun sport. Beach Ball Bang is more than just a sport, it is a lifestyle. It promotes fitness, teamwork, friendship and fun. Whether you are looking for a casual game with your friends, or a competitive tournament with prizes, Beach Ball Bang has something for you. Join us today and discover the joy of Beach Ball Bang!</p>
         </div>
-        <div class="card flex-card">
-          <h2>I'm flexing this flex</h2>
-          <div class="flex-demo">
-            <div class="flex-ball"></div>
-            <div class="flex-ball"></div>
-            <div class="flex-ball"></div>
-          </div>
+
+        <div class="section">
+            <h2>Rules of the Game</h2>
+            <p>The rules are simple.</p>
+            <p>Bounce the ball up and down the steps.</p>
+            <p>If you hit the ball into someone's point zone, you get a point.</p>
+            <p>Besides that, the rules can vary, so choose which rules you like best!</p>
+            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/4950f5e567af206dbb6f4017007bd9cd35c24bc0_beachball.png" alt="Beach Ball" class="ball-image">
         </div>
-      </div>
-    </section></center>
-    <footer>
-      Made with <span class="rainbow-text">CSS</span>
-    </footer>
-  </main>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Beach Ball Bang
+    </div>
 </body>
 </html>
